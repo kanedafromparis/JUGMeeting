@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+  <web>JUGMeetingCode</web>
+  <name>AcceptMaillingListUser</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <parent>JUGMeetingCode.WebHome</parent>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1420066800000</creationDate>
+  <date>1420066800000</date>
+  <contentUpdateDate>1420066800000</contentUpdateDate>
+  <version>1.1</version>
+  <title>AcceptMaillingListUser</title>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>##This page is supposed to retreive the mail form 
+#mlmanager@parisjug.org and display the list of new registration users
+# Object : Subscription request to list announce@parisjug.java.net
+#Dear owner of list announce@parisjug.java.net,
+#
+#A user asked to be added as a subscriber to your list. If this is OK with you, you should click the following URL :
+#
+#mailto:sympa@parisjug.java.net?subject=auth%2009e1560d%20ADD%20announce%20gauthier.perrineau%40gmail.com %20
+#
+#or send an email to sympa@parisjug.java.net with the following subject :
+#AUTH 09e1560d ADD announce gauthier.perrineau@gmail.com
+# 
+#It should create a check box list that will send the AUTH mail.##</content>
+</xwikidoc>

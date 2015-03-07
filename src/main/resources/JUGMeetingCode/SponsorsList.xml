@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+  <web>JUGMeetingCode</web>
+  <name>SponsorsList</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <parent/>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1420066800000</creationDate>
+  <date>1420066800000</date>
+  <contentUpdateDate>1420066800000</contentUpdateDate>
+  <version>1.1</version>
+  <title>SponsorsList</title>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>= This Page is propose as example and should be copy and custumisze in "JUGMeeting" space or any other space you want =
+
+{{velocity}}
+##set($xwqlstatement ="from doc.object(JUGMeetingCode.SponsorClass) as sponsor")
+#set($xwqlstatement ="from doc.object(JUGMeetingCode.SponsorClass) as sponsor where doc.space='JUGMeeting'")
+#set($sponsorLst = $services.query.xwql($xwqlstatement).execute())
+#foreach ($spkrdoc in $sponsorLst)
+#set($sponsor = $xwiki.getDocument($spkrdoc).getObject('JUGMeetingCode.SponsorClass'))
+|= |= **$sponsor.spname**
+| ## check fo not empty nor fileme vale
+(((#if($stringtool.isNotBlank($sponsor.svgLogo))
+image:$sponsor.svgLogo
+#else if if($stringtool.isNotBlank($sponsor.jpegLogo))
+image:$sponsor.svgLogo
+#end)))|(((
+(((#if($stringtool.isNotBlank($sponsor.description))
+$sponsor.description
+#end)))
+(((|#if($stringtool.isNotBlank($sponsor.contact))
+[[$sponsor.contact&gt;&gt;mailto:$sponsor.contact]]
+#end|#if($stringtool.isNotBlank($sponsor.website))
+[[$sponsor.website&gt;&gt;$sponsor.website||targer=blanck]]
+#end)))
+
+))) 
+#end
+{{/velocity}}
+</content>
+</xwikidoc>

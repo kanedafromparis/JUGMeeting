@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+  <web>JUGMeetingCode</web>
+  <name>SpeakerEditSheet</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <parent>JUGMeetingCode.SpeakerClass</parent>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1420066800000</creationDate>
+  <date>1420066800000</date>
+  <contentUpdateDate>1420066800000</contentUpdateDate>
+  <version>1.1</version>
+  <title>#if($doc.name == 'SpeakerSheet')Speaker Sheet#{else}$services.display.title($doc, {'displayerHint': 'default'})#end</title>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <object>
+    <class>
+      <name>XWiki.SheetDescriptorClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <action>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <name>action</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Action</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </action>
+    </class>
+    <name>JUGMeetingCode.SpeakerEditSheet</name>
+    <number>0</number>
+    <className>XWiki.SheetDescriptorClass</className>
+    <guid>a2b3c700-f085-4115-bff5-9a03f9a2a353</guid>
+    <property>
+      <action>edit</action>
+    </property>
+  </object>
+  <content>{{velocity}}
+; Picture  
+  : {{attachmentSelector classname="JUGMeetingCode.SpeakerClass" property="picture" filter="jpg,gif" displayImage="true" height="114" width="114"/}}
+|**First Name** | $doc.display("firstname")|**Lastname** | $doc.display("lastname")
+|**Twitter**|$doc.display("twitterAccount")|**G+** | $doc.display("gplus")
+|**Email**|$doc.display("email")|**Blog** | $doc.display("blog")
+; bio 
+: $doc.display("bio")  
+{{/velocity}}</content>
+</xwikidoc>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+  <web>JUGMeetingCode</web>
+  <name>WebHome</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <parent/>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1420066800000</creationDate>
+  <date>1420066800000</date>
+  <contentUpdateDate>1420066800000</contentUpdateDate>
+  <version>1.1</version>
+  <title>WebHome</title>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>This Space is dedicated to the JUGMeeting Extention.
+
+[[View the UML&gt;&gt;url:https://www.lucidchart.com/documents/view/7fb32956-0b91-4341-8323-d970b3478feb/1||rel="__blank" title="Go to the UML Diagramme"]]
+
+{{velocity}}
+## Create a new [[Sponsor&gt;&gt;doc:SponsorClass]]
+{{html}}
+&lt;form action="JUGMeeting/SponsorClass$doc.getURL('create')" method="post"&gt;
+  &lt;div&gt;
+    &lt;input type="hidden" name="parent" value="JUGMeetingCode.SponsorClass"/&gt;
+    &lt;input type="hidden" name="template" value="JUGMeetingCode.SponsorTemplate"/&gt;
+    &lt;input type="hidden" name="space" value="JUGMeeting"/&gt;
+    &lt;label for="name"&gt;Sponsor Name (no space):&lt;/label&gt; &lt;input type="text" id="name" name="page" value="Name of the class" class="withTip"/&gt;
+    &lt;span class="buttonwrapper"&gt;&lt;input type="submit" value="Create this Class" class="button"/&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+{{/html}}
+
+{{/velocity}}
+
+{{velocity}}
+## Create a new [[SponsorManager&gt;&gt;doc:SponsorManagerClass||rel="__blank" title="Create a new contract"]]
+{{html}}
+&lt;form action="JUGMeeting.WebHome/SponsorManagerClass$doc.getURL('create')" method="post"&gt;
+  &lt;div&gt;
+    &lt;input type="hidden" name="parent" value="JUGMeetingCode.SponsorManagerClass"/&gt;
+    &lt;input type="hidden" name="template" value="JUGMeetingCode.SponsorManagerTemplate"/&gt;
+    &lt;input type="hidden" name="space" value="JUGMeeting"/&gt;
+    &lt;label for="name"&gt;Sponsor Manager (no space):&lt;/label&gt; &lt;input type="text" id="name" name="page" value="Name of the class" class="withTip"/&gt;
+    &lt;span class="buttonwrapper"&gt;&lt;input type="submit" value="Create this Class" class="button"/&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+{{/html}}
+
+{{/velocity}}
+
+
+{{velocity}}
+## Create a new [[Speaker&gt;&gt;doc:SpeakerClass||rel="__blank" title="Create a new Speaker"]]
+{{html}}
+&lt;form action="JUGMeeting.WebHome/SpeakerClass$doc.getURL('create')" method="post"&gt;
+  &lt;div&gt;
+    &lt;input type="hidden" name="parent" value="JUGMeetingCode.SpeakerClass"/&gt;
+    &lt;input type="hidden" name="template" value="JUGMeetingCode.SpeakerTemplate"/&gt;
+    &lt;input type="hidden" name="space" value="JUGMeeting"/&gt;
+    &lt;label for="name"&gt;SpeakerName (no space):&lt;/label&gt; &lt;input type="text" id="name" name="page" value="Name of the class" class="withTip"/&gt;
+    &lt;span class="buttonwrapper"&gt;&lt;input type="submit" value="Create this Class" class="button"/&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+{{/html}}
+
+{{/velocity}}
+
+Create a new  [[Session&gt;&gt;doc:SessionClass||rel="__blank" title="Create a new session (including Buffet)"]]
+
+Create a new  [[Meeting&gt;&gt;doc:MeetingClass||rel="__blank" title="Create a new meeting"]]
+
+Remenber that this can easilly be done by copying and existing page.</content>
+</xwikidoc>
